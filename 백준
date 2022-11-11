@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main (){
+
+int n1, n2, n3;
+int l1, l2, l3;  
+  while(1){
+    scanf("%d %d %d", &n1, &n2, &n3); 
+    if(n1 == 0 && n2 == 0 && n3 == 0) break; //세 수가 0일 때, 루프를 끝낼 수 있게 조건문 사용
+
+    //각 변의 제곱을 미리 저장해 놈
+    l1 = n1*n1; 
+    l2 = n2*n2;
+    l3 = n3*n3;
+
+    if(l1==l2+l3 || l2==l1+l3 || l3==l1+l2){ //OR을 통하여 각 변에 대하여 판단함
+      printf("ㅇㅇ 맞음\n");
+    }
+    else{
+      printf("ㄴㄴ 아님\n");
+    }
+  } //무한루프 문을 통해 여러 줄을 입력받게 함
+
+  return 0;
+}
